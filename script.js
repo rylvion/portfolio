@@ -119,7 +119,7 @@ const projectDetails = {
         features: [
             '15+ pages live, goal to 100',
             'MediaWiki-powered with community contributions',
-            'Regular updates and maintenance'
+            'Active maintenance'
         ],
         live: 'https://uncon.fandom.com',
         repo: ''
@@ -201,32 +201,7 @@ function initProjectModals() {
     });
 }
 
-// ==========================================
-// UPDATES FEED (STATIC DATA)
-// ==========================================
-
-const updatesData = [
-    { title: 'Front-end enhancements', date: '2026-01-07', tag: 'Release', summary: 'Added filters, dark-mode polish, accessibility boosts, and project detail modals.' },
-    { title: 'Back-to-top + tags', date: '2026-01-06', tag: 'UI', summary: 'Introduced back-to-top control, project tags, and animated cards.' },
-    { title: 'Portfolio launch', date: '2026-01-05', tag: 'Launch', summary: 'Initial release of the portfolio with projects, skills, and contact links.' }
-];
-
-function initUpdates() {
-    const container = document.getElementById('updates-list');
-    if (!container) return;
-    container.innerHTML = '';
-
-    updatesData.forEach(({ title, date, tag, summary }) => {
-        const card = document.createElement('article');
-        card.className = 'update-card';
-        card.innerHTML = `
-            <p class="update-title">${title}</p>
-            <p class="update-meta">${tag} • ${date}</p>
-            <p class="update-summary">${summary}</p>
-        `;
-        container.appendChild(card);
-    });
-}
+// Updates feature removed
 
 // ==========================================
 // CONTACT UTILITIES
@@ -278,20 +253,7 @@ function initContactForm() {
     });
 }
 
-function initResumeButtons() {
-    const viewBtn = document.getElementById('resume-view');
-    const note = document.getElementById('resume-note');
-    if (!viewBtn) return;
-
-    fetch('resume.pdf', { method: 'HEAD' }).then(resp => {
-        if (resp.ok) {
-            viewBtn.classList.remove('is-hidden');
-            if (note) note.textContent = 'Resume available as PDF.';
-        }
-    }).catch(() => {
-        // Ignore missing file; note already instructs placement
-    });
-}
+// Resume feature disabled: no CV available currently.
 
 // ==========================================
 // ==========================================
@@ -642,10 +604,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initFocusVisibility();
     initIntersectionObserver();
     initScrollAnimations();
-    initUpdates();
     initCopyEmail();
     initContactForm();
-    initResumeButtons();
     initProjectModals();
     initAnimationCardExpand();
 });
