@@ -40,12 +40,22 @@
 
     <body>
         <a href="#main-content" class="skip-link">Skip to main content</a>
+        <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
         <header>
-            <h1>Welcome to My Portfolio</h1>
+            <div class="header-top">
+                <h1>Welcome to My Portfolio</h1>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
             <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#updates">Updates</a></li>
+                    <li><a href="#animations">Animation</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#credits">Acknowledgements</a></li>
                 </ul>
@@ -66,6 +76,30 @@
                 My goal is to create engaging games and digital experiences that combine creativity with coding. 
                 Outside of tech, I enjoy exploring web development trends, contributing to online communities, and collaborating on projects that challenge my skills.
             </p>
+
+            <div class="highlight-grid" aria-label="Highlights">
+                <div class="highlight-card">
+                    <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                    <div>
+                        <p class="highlight-title">Active Projects</p>
+                        <p class="highlight-value">3 ongoing builds</p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    <div>
+                        <p class="highlight-title">Community</p>
+                        <p class="highlight-value">Wiki + DevForum</p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-universal-access" aria-hidden="true"></i>
+                    <div>
+                        <p class="highlight-title">Focus</p>
+                        <p class="highlight-value">Accessibility & UX</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="skills" aria-labelledby="skills-heading">
@@ -107,15 +141,32 @@
         <section id="projects" class="portfolio-section" aria-labelledby="projects-heading">
             <h2 id="projects-heading">Projects</h2>
 
+            <div class="project-filters" role="group" aria-label="Filter projects by tag">
+                <button class="filter-btn active" data-tag="all">All</button>
+                <button class="filter-btn" data-tag="web">Web</button>
+                <button class="filter-btn" data-tag="data viz">Data Viz</button>
+                <button class="filter-btn" data-tag="community">Community</button>
+                <button class="filter-btn" data-tag="responsive">Responsive</button>
+                <button class="filter-btn" data-tag="accessibility">Accessibility</button>
+            </div>
+
             <div class="project-card">
-                <h3>Unconventional Abilities Visualizer</h3>
+                <div class="project-header">
+                    <h3>Unconventional Abilities Visualizer</h3>
+                    <div class="project-tags">
+                        <span class="tag">Web</span>
+                        <span class="tag">Data Viz</span>
+                        <span class="tag">Interactive</span>
+                    </div>
+                </div>
                 <a href="https://rylvion.github.io/unconventional/" target="_blank" rel="noopener noreferrer" aria-label="View Unconventional Abilities Visualizer project">
-                    <img src="https://rylvion.github.io/unconventional/og-image.png" alt="Interactive radar chart showing ability stats including power, agility, defense, intelligence, and perception" />
+                    <img loading="lazy" src="https://rylvion.github.io/unconventional/og-image.png" alt="Interactive radar chart showing ability stats including power, agility, defense, intelligence, and perception" />
                 </a>
                 <p>
                     A web-based interactive stats visualizer for the Roblox game <em>Unconventional</em>.
                     Users can compare different abilities and see their power, agility, defense, intelligence, and perception in a radar chart.
                 </p>
+                <button type="button" class="btn-secondary view-details" data-project="uncon-visualizer">View details</button>
                 <ul>
                     <li><strong><i class="fas fa-tools" aria-hidden="true"></i> Technologies:</strong> HTML, CSS, JavaScript, Chart.js, Python</li>
                     <li><strong><i class="fas fa-star" aria-hidden="true"></i> Features:</strong> Interactive radar chart, responsive design, user-friendly interface</li>
@@ -126,11 +177,19 @@
             </div>
 
             <div class="project-card">
-                <h3><a href="https://uncon.fandom.com" target="_blank" rel="noopener noreferrer">Unconventional Wiki</a></h3>
+                <div class="project-header">
+                    <h3><a href="https://uncon.fandom.com" target="_blank" rel="noopener noreferrer">Unconventional Wiki</a></h3>
+                    <div class="project-tags">
+                        <span class="tag">Community</span>
+                        <span class="tag">Wiki</span>
+                        <span class="tag">Documentation</span>
+                    </div>
+                </div>
                 <p>
                     An unofficial wiki for the Roblox game <em>Unconventional</em>, created and maintained solely by me as the admin. 
                     The wiki provides detailed information on game mechanics, items, and strategies. Currently, it contains 15 pages, with a goal of expanding to 100 pages.
                 </p>
+                <button type="button" class="btn-secondary view-details" data-project="uncon-wiki">View details</button>
                 <ul>
                     <li><strong>Technologies:</strong> Fandom wiki platform, MediaWiki markup</li>
                     <li><strong>Features:</strong> Comprehensive game guides, user contributions, regularly updated content</li>
@@ -140,11 +199,19 @@
             </div>
 
             <div class="project-card">
-                <h3>Portfolio Website</h3>
+                <div class="project-header">
+                    <h3>Portfolio Website</h3>
+                    <div class="project-tags">
+                        <span class="tag">Web</span>
+                        <span class="tag">Responsive</span>
+                        <span class="tag">Accessibility</span>
+                    </div>
+                </div>
                 <p>
                     This very portfolio website you are currently viewing! It showcases my projects, skills, and contact information.
                     Built with a focus on simplicity and responsiveness to ensure a great user experience across all devices.
                 </p>
+                <button type="button" class="btn-secondary view-details" data-project="portfolio">View details</button>
                 <ul>
                     <li><strong>Technologies:</strong> HTML, CSS, JavaScript</li>
                     <li><strong>Features:</strong> Responsive design, easy navigation, clean layout</li>
@@ -154,19 +221,119 @@
         </section>
 
 
+        <section id="updates" aria-labelledby="updates-heading">
+            <h2 id="updates-heading">Updates</h2>
+            <div id="updates-list" class="updates-list" aria-live="polite"></div>
+        </section>
+
+
+        <section id="animations" aria-labelledby="animations-heading">
+            <h2 id="animations-heading">Animation</h2>
+            <p>Flipaclip animations created on January 1st, 2026. These showcase my journey into digital animation with hand-drawn frame work and visual effects.</p>
+            
+            <div class="animation-grid">
+                <div class="animation-card">
+                    <h3>Bomb Animation</h3>
+                    <div class="video-container">
+                        <video autoplay muted loop playsinline>
+                            <source src="assets/Bomb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p class="animation-specs">11 frames • 8 FPS • 1 second</p>
+                    <p class="animation-description">A quick explosive charge-up animation showcasing rapid frame transitions and energy buildup, speedran making it within 1 minutes.</p>
+                </div>
+
+                <div class="animation-card">
+                    <h3>My First Project</h3>
+                    <div class="video-container">
+                        <video autoplay muted loop playsinline>
+                            <source src="assets/MyFirstProject.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p class="animation-specs">54-56 frames • 12 FPS • ~4 seconds</p>
+                    <p class="animation-description">My first complete animation project created on January 1st. A detailed sequence demonstrating frame-by-frame animation techniques.</p>
+                </div>
+
+                <div class="animation-card">
+                    <h3>Roblox VFX Preview</h3>
+                    <div class="vfx-container">
+                        <img src="assets/rblx vfx.png" alt="Roblox visual effects showing charging energy sucking from atmosphere and explosion sequence" loading="lazy" />
+                    </div>
+                    <p class="animation-specs">Static preview • Charging → Absorption → Explosion</p>
+                    <p class="animation-description">Visual effects reference showing the complete sequence: energy charging up, being sucked from the atmosphere, and the final explosive impact.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animation Modal -->
+        <div id="animation-modal" class="animation-modal hidden" role="dialog" aria-modal="true" aria-labelledby="animation-modal-title">
+            <div class="modal-content animation-modal-content">
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+                <h2 id="animation-modal-title" class="modal-title"></h2>
+                <div id="animation-modal-body" class="modal-body">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+
         <section id="contact" aria-labelledby="contact-heading">
             <h2 id="contact-heading">Contact</h2>
             <p>If you'd like to get in touch, feel free to reach me at: </p>
+            <div class="resume-actions" aria-label="Resume actions">
+                <a id="resume-view" class="btn-primary resume-btn is-hidden" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">View Resume (PDF)</a>
+                <a class="btn-ghost resume-btn" href="mailto:abdurahmansharif.uk@gmail.com?subject=Resume%20Request">Request Resume via Email</a>
+                <span id="resume-note" class="resume-note">Place your resume.pdf in the project root to enable the view button.</span>
+            </div>
+            <div class="availability-badges" aria-label="Availability">
+                <span class="badge open">Open to collaborations</span>
+                <span class="badge learning">Learning & mentoring friendly</span>
+                <span class="badge remote">Remote friendly</span>
+            </div>
             <ul>
-                <li><a href="mailto:abdurahmansharif.uk@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> abdurahmansharif.uk@gmail.com</a></li>
+                <li class="email-row">
+                    <a href="mailto:abdurahmansharif.uk@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> abdurahmansharif.uk@gmail.com</a>
+                    <button type="button" class="copy-email" data-email="abdurahmansharif.uk@gmail.com" aria-label="Copy email address">Copy</button>
+                    <span class="copy-status" aria-live="polite"></span>
+                </li>
                 <li><a href="https://www.linkedin.com/in/rylvion/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
                 <li><a href="https://www.freecodecamp.org/rylvion" target="_blank" rel="noopener noreferrer"><i class="fab fa-free-code-camp" aria-hidden="true"></i> freeCodeCamp</a></li>
                 <li><a href="https://github.com/rylvion" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
-                <li><a href="https://www.devforum.roblox.com/u/rylvion/summary" target="_blank" rel="noopener noreferrer"><i class="fas fa-comments" aria-hidden="true"></i> Roblox DevForum</a></li>
+                <li><a href="https://devforum.roblox.com/u/rylvion/summary" target="_blank" rel="noopener noreferrer"><i class="fas fa-comments" aria-hidden="true"></i> Roblox DevForum</a></li>
                 <li><a href="https://reddit.com/u/rylvion" target="_blank" rel="noopener noreferrer"><i class="fab fa-reddit" aria-hidden="true"></i> Reddit</a></li>
                 <li><a href="https://youtube.com/@rylvion" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a></li>
                 <li><a href="https://x.com/rylvion" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter" aria-hidden="true"></i> X (formerly Twitter)</a></li>
             </ul>   
+
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-row">
+                    <label for="cf-name">Name</label>
+                    <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+                </div>
+                <div class="form-row">
+                    <label for="cf-email">Email</label>
+                    <input id="cf-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+                </div>
+                <div class="form-row">
+                    <label for="cf-reason">Reason</label>
+                    <select id="cf-reason" name="reason">
+                        <option value="Hello">Hello</option>
+                        <option value="Collaboration">Collaboration</option>
+                        <option value="Project Inquiry">Project Inquiry</option>
+                        <option value="Feedback">Feedback</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="cf-message">Message</label>
+                    <textarea id="cf-message" name="message" rows="4" required placeholder="What would you like to discuss?"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Send Message</button>
+                    <a class="btn-ghost" href="mailto:abdurahmansharif.uk@gmail.com?subject=Hello%20from%20your%20portfolio">Use mail app</a>
+                </div>
+                <p id="form-status" class="form-status" aria-live="polite"></p>
+            </form>
 
         </section>
 
@@ -186,6 +353,20 @@
             </p>
         </section>
         </main>
+
+        <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal-overlay" data-close-modal></div>
+            <div class="modal-content" role="document" tabindex="-1">
+                <button class="modal-close" aria-label="Close modal" data-close-modal>&times;</button>
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+                <ul id="modal-features" class="modal-features"></ul>
+                <div class="modal-links">
+                    <a id="modal-live" class="btn-primary" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                    <a id="modal-repo" class="btn-ghost" href="#" target="_blank" rel="noopener noreferrer">Source</a>
+                </div>
+            </div>
+        </div>
 
         <footer role="contentinfo">
             <p>&copy; 2026 rylvion. All rights reserved.</p>
