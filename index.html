@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google Analytics -->
+            <!-- too be added  -->
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <!-- Links -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <!-- Meta tags -->
+        <meta name="description" content="A personal portfolio showcasing projects and skills.">
+        <meta name="keywords" content="portfolio, projects, skills, web development">
+        <meta name="author" content="rylvion">
+        <meta name="robots" content="index, follow">
+        <meta name="theme-color" content="#317EFB">
+
+        <!-- Icons -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Portfolio">
+        <meta property="og:description" content="A personal portfolio showcasing projects and skills.">
+        <meta property="og:image" content="og-image.png">
+        <meta property="og:url" content="https://www.rylvion.github.io/portfolio">
+        <meta property="og:site_name" content="rylvion Portfolio">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Portfolio">
+        <meta name="twitter:description" content="A personal portfolio showcasing projects and skills.">
+        <meta name="twitter:image" content="og-image.png">
+    </head>
+
+    <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <header>
+            <h1>Welcome to My Portfolio</h1>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#credits">Acknowledgements</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+             <p>
+                Hi, I&#8217;m <strong>Abdurahman Sharif</strong>, a Level 3 Computer Science and Digital Development student at Manchester College. 
+                I&#8217;m passionate about coding, scripting, and game development, especially in <strong>Roblox Studio</strong>. 
+                I run my own wiki and website project called <em>UnConventional</em>, inspired by the webtoon <em>unOrdinary</em> and a Roblox game of the same name. 
+                I enjoy building interactive tools, learning new programming skills, and exploring creative tech projects.
+            </p>
+            <p>
+                I have experience with <strong>Python, Lua, HTML/CSS, and JavaScript</strong>, and I love experimenting with new frameworks and game mechanics. 
+                My goal is to create engaging games and digital experiences that combine creativity with coding. 
+                Outside of tech, I enjoy exploring web development trends, contributing to online communities, and collaborating on projects that challenge my skills.
+            </p>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+
+            <h3>Languages</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Lua</li>
+                </ul>
+
+                <h3>Frameworks / Libraries</h3>
+                <ul>
+                    <li>Chart.js</li>
+                </ul>
+
+                <h3>Tools</h3>
+                <ul>
+                    <li>Roblox Studio</li>
+                    <li>Git & GitHub</li>
+                    <li>Fandom Wiki</li>
+                    <li>VS Code</li>
+                    <li>freeCodeCamp</li>
+                </ul>
+
+                <h3>Interests</h3>
+                <ul>
+                    <li>Web Development</li>
+                    <li>Game Development</li>
+                    <li>Data Visualization</li>
+                    <li>Community Building</li>
+                </ul>
+        </section>
+
+
+        <section id="projects" class="portfolio-section" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+
+            <div class="project-card">
+                <h3>Unconventional Abilities Visualizer</h3>
+                <a href="https://rylvion.github.io/unconventional/" target="_blank" rel="noopener noreferrer" aria-label="View Unconventional Abilities Visualizer project">
+                    <img src="https://rylvion.github.io/unconventional/og-image.png" alt="Interactive radar chart showing ability stats including power, agility, defense, intelligence, and perception" />
+                </a>
+                <p>
+                    A web-based interactive stats visualizer for the Roblox game <em>Unconventional</em>.
+                    Users can compare different abilities and see their power, agility, defense, intelligence, and perception in a radar chart.
+                </p>
+                <ul>
+                    <li><strong><i class="fas fa-tools" aria-hidden="true"></i> Technologies:</strong> HTML, CSS, JavaScript, Chart.js, Python</li>
+                    <li><strong><i class="fas fa-star" aria-hidden="true"></i> Features:</strong> Interactive radar chart, responsive design, user-friendly interface</li>
+                    <li><strong><i class="fas fa-play-circle" aria-hidden="true"></i> Live Demo:</strong> <a href="https://rylvion.github.io/unconventional/" target="_blank" rel="noopener noreferrer">View Project</a></li>
+                    <li><strong><i class="fas fa-database" aria-hidden="true"></i> Data Source:</strong> <a href="https://docs.google.com/spreadsheets/d/1cCXSA-Qvz8-iB6VP6q1-0MHTFir2HCQrm80RGscqDGk/edit?gid=1006676226#gid=1006676226" target="_blank" rel="noopener noreferrer">Google Sheets</a></li>
+                </ul>
+                <!-- Future: Add a live demo or embed chart here once API/data source is fully dynamic (and not on a statically hosted site) -->
+            </div>
+
+            <div class="project-card">
+                <h3><a href="https://uncon.fandom.com" target="_blank" rel="noopener noreferrer">Unconventional Wiki</a></h3>
+                <p>
+                    An unofficial wiki for the Roblox game <em>Unconventional</em>, created and maintained solely by me as the admin. 
+                    The wiki provides detailed information on game mechanics, items, and strategies. Currently, it contains 15 pages, with a goal of expanding to 100 pages.
+                </p>
+                <ul>
+                    <li><strong>Technologies:</strong> Fandom wiki platform, MediaWiki markup</li>
+                    <li><strong>Features:</strong> Comprehensive game guides, user contributions, regularly updated content</li>
+                    <li><strong>Note:</strong> ⚠️ This wiki is unofficial and is not affiliated with or endorsed by the developers of <em>Unconventional</em>. This wiki is also incomplete for the time being</li>
+                    <li><strong>Link:</strong> <a href="https://uncon.fandom.com" target="_blank" rel="noopener noreferrer">Visit Wiki</a></li>
+                </ul>  
+            </div>
+
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>
+                    This very portfolio website you are currently viewing! It showcases my projects, skills, and contact information.
+                    Built with a focus on simplicity and responsiveness to ensure a great user experience across all devices.
+                </p>
+                <ul>
+                    <li><strong>Technologies:</strong> HTML, CSS, JavaScript</li>
+                    <li><strong>Features:</strong> Responsive design, easy navigation, clean layout</li>
+                    <li><strong>Source Code:</strong> <a href="https://github.com/rylvion/portfolio" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <p>If you'd like to get in touch, feel free to reach me at: </p>
+            <ul>
+                <li><a href="mailto:abdurahmansharif.uk@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> abdurahmansharif.uk@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/rylvion/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+                <li><a href="https://www.freecodecamp.org/rylvion" target="_blank" rel="noopener noreferrer"><i class="fab fa-free-code-camp" aria-hidden="true"></i> freeCodeCamp</a></li>
+                <li><a href="https://github.com/rylvion" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+                <li><a href="https://www.devforum.roblox.com/u/rylvion/summary" target="_blank" rel="noopener noreferrer"><i class="fas fa-comments" aria-hidden="true"></i> Roblox DevForum</a></li>
+                <li><a href="https://reddit.com/u/rylvion" target="_blank" rel="noopener noreferrer"><i class="fab fa-reddit" aria-hidden="true"></i> Reddit</a></li>
+                <li><a href="https://youtube.com/@rylvion" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+                <li><a href="https://x.com/rylvion" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter" aria-hidden="true"></i> X (formerly Twitter)</a></li>
+            </ul>   
+
+        </section>
+
+        <section id="credits" aria-labelledby="credits-heading">
+            <h2 id="credits-heading">Acknowledgements</h2>
+            <p>
+                Special thanks to the developers of <em>Unconventional</em> for creating an inspiring game that fueled my passion for game development and web projects. 
+                I also want to recognize a specific contributor, <strong>@theinfoperson</strong> (display name: Infoman), whose testing, videos, and assets were invaluable for my visualizer project on Roblox.
+            </p>
+            <p>
+                Gratitude to the open-source community for providing resources and tools that made my projects possible. 
+                Thanks to my friends and family for their support and encouragement throughout my learning journey—your belief in me keeps me motivated to improve my skills every day.
+            </p>
+            <p>
+                Finally, I want to give a special shoutout to <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a> for their amazing tutorials and community support. 
+                I wouldn't be where I am today without them! If I had to recommend a platform to learn coding, it would be freeCodeCamp.
+            </p>
+        </section>
+        </main>
+
+        <footer role="contentinfo">
+            <p>&copy; 2026 rylvion. All rights reserved.</p>
+        </footer>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
